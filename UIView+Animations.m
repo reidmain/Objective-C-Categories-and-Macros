@@ -26,6 +26,7 @@
 	}
 	else
 	{
+        // This is better than setting the duration of the animation to 0.0 because that will still result in the completion block being executed in a subsequent run loop.
 		if (animations != nil)
 		{
 			animations();

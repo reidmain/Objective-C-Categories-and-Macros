@@ -20,7 +20,7 @@
 {
 	CGPoint viewCenter = self.center;
 	
-	// floor the x origin to avoid subpixel rendering
+	// Floor the x origin to avoid subpixel rendering.
 	viewCenter.x = floor(xOrigin) + (self.width / 2.0f);
 	
 	self.center = viewCenter;
@@ -37,7 +37,7 @@
 {
 	CGPoint viewCenter = self.center;
 	
-	// floor the y origin to avoid subpixel rendering
+	// Floor the y origin to avoid subpixel rendering.
 	viewCenter.y = floorf(yOrigin) + (self.height / 2.0f);
 	
 	self.center = viewCenter;
@@ -52,12 +52,12 @@
 
 - (void)setWidth: (CGFloat)width
 {
-	// because changing the width of a view through its bounds updates the x origin we need to track the previous value and set it after the bounds have been changed
+	// Changing the width of a view through its bounds updates the view's x origin so it needs to be set again after the the bounds have been changed.
 	CGFloat previousXOrigin = self.xOrigin;
 	
 	CGRect viewBounds = self.bounds;
 	
-	// floor the width to avoid subpixel rendering
+	// Floor the width to avoid subpixel rendering
 	viewBounds.size.width = floorf(width);
 	
 	self.bounds = viewBounds;
@@ -74,12 +74,12 @@
 
 - (void)setHeight: (CGFloat)height
 {
-	// because changing the height of a view through its bounds updates the y origin we need to track the previous value and set it after the bounds have been changed
+	// Changing the height of a view through its bounds updates the view's y origin so it needs to be set again after the the bounds have been changed.
 	CGFloat previousYOrigin = self.yOrigin;
 	
 	CGRect viewBounds = self.bounds;
 	
-	// floor the height to avoid subpixel rendering
+	// Floor the height to avoid subpixel rendering.
 	viewBounds.size.height = floorf(height);
 	
 	self.bounds = viewBounds;
