@@ -1,4 +1,4 @@
-#import "NSArray+Accessors.h"
+#import "NSArray+Accessing.h"
 
 
 #pragma mark Class Definition
