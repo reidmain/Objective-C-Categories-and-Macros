@@ -15,23 +15,25 @@ typedef enum
 } UIViewVerticalAlignment;
 
 
-#pragma mark -
-#pragma mark Class Interface
+#pragma mark - Class Interface
 
 @interface UIView (Layout)
 
 
-#pragma mark -
-#pragma mark Properties
+#pragma mark - Properties
 
 @property (nonatomic, assign) CGFloat xOrigin;
 @property (nonatomic, assign) CGFloat yOrigin;
 @property (nonatomic, assign) CGFloat width;
 @property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat xCenter;
+@property (nonatomic, assign) CGFloat yCenter;
 
 
-#pragma mark -
-#pragma mark Instance Methods
+#pragma mark - Instance Methods
+
+- (void)setPixelSnappedFrame: (CGRect)frame;
+- (void)setPixelSnappedCenter: (CGPoint)center;
 
 - (void)alignHorizontally: (UIViewHorizontalAlignment)horizontalAlignment;
 - (void)alignVertically: (UIViewVerticalAlignment)verticalAlignment;
@@ -41,4 +43,4 @@ typedef enum
 - (void)removeAllSubviews;
 
 
-@end // @interface UIView (Layout)
+@end
