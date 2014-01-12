@@ -3,8 +3,7 @@
 @interface NSObject (PerformBlock)
 
 
-#pragma mark -
-#pragma mark Instance Methods
+#pragma mark - Instance Methods
 
 - (void)performBlock: (dispatch_block_t)block 
 	afterDelay: (NSTimeInterval)delay;
@@ -14,4 +13,4 @@
 - (void)performBlockInBackground: (dispatch_block_t)block;
 
 
-@end // @interface NSObject (PerformBlock)
+@end
